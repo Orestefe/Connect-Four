@@ -1,0 +1,25 @@
+{
+	"name": "connect-four",
+	"version": "1.0.0",
+	"description": "A clone of the popular Connect Four game",
+	"main": "connecFour.js",
+	"dependencies": {
+		"sass": "^1.26.11"
+	},
+	"devDependencies": {
+		"node-sass": "^4.14.1"
+	},
+	"scripts": {
+		"sass": "node-sass -w scss/ -o css/ --recursive"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Orestefe/Connect-Four.git"
+	},
+	"author": "Felipe Orestes <orestefe@gmail.com>",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/Orestefe/Connect-Four/issues"
+	},
+	"homepage": "https://github.com/Orestefe/Connect-Four#readme"
+}

@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  font-family: Arial; }
+
+.game-header {
+  top: -100px;
+  margin: 0 auto;
+  color: black; }
+
+.game-container {
+  position: relative;
+  top: 2rem;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 2rem;
+  width: 1000px; }
+
+.game-board {
+  margin: 0 auto;
+  margin-bottom: 0.5rem;
+  height: 650px;
+  width: 750px;
+  border: 1px solid;
+  border-radius: 6px;
+  background: dodgerblue; }
+
+table {
+  display: inline-block;
+  margin: 0 auto;
+  padding: 0.5rem;
+  overflow: hidden; }
+
+td,
+th {
+  position: relative; }
+
+.cell {
+  width: 103px;
+  height: 103px;
+  background: white;
+  border: 1px solid black;
+  border-radius: 50%; }
+
+td:hover::after {
+  background-color: rgba(0, 0, 0, 0.067);
+  content: "";
+  height: 2000px;
+  left: 0;
+  position: absolute;
+  top: -600px;
+  width: 100%;
+  z-index: 1; }
+
+.info-bar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 750px;
+  margin: 0 auto; }
+
+.info-text {
+  font-weight: 700;
+  font-size: 1.5rem; }
+
+.modal {
+  position: absolute;
+  text-align: center;
+  top: 33%;
+  left: 25%;
+  padding: 1rem;
+  height: 250px;
+  width: 500px;
+  background-color: #eef9fb;
+  border: 1px solid black;
+  border-radius: 6px;
+  font-weight: 700;
+  z-index: 1; }
+
+.rules-modal {
+  z-index: 2; }
+  .rules-modal p {
+    text-align: left;
+    font-size: 0.95rem;
+    padding: 0.65rem; }
+  .rules-modal p:last-child {
+    text-align: center; }
+
+.player-modal {
+  display: block; }
+
+.player-info {
+  padding: 1rem 0; }
+
+.player-colors {
+  padding-top: 0.5rem; }
+
+.end-game-modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between; }
+
+.trophy {
+  margin-top: 1rem;
+  height: 100px;
+  width: 100px; }
+
+.color-swatch {
+  position: relative;
+  transform: translate(0, -5%);
+  padding: 0.15rem;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  border: 0.5px solid black; }
+
+.color-pick {
+  font-size: 0.75rem; }
+
+.btn {
+  font-size: 1.5rem;
+  width: 10rem;
+  padding: 1rem;
+  background-color: #4d9db8;
+  font-weight: 700;
+  color: white;
+  border: 1px solid black;
+  border-radius: 6px;
+  cursor: pointer;
+  outline: 0; }
+  .btn--small {
+    font-size: 1rem;
+    width: 7.5rem;
+    padding: 0.25rem; }
+
+.hide {
+  display: none; }
+
+.cs-red {
+  background-color: red; }
+
+.cs-black {
+  background-color: black; }
+
+.cs-green {
+  background-color: green; }
+
+.cs-orange {
+  background-color: orange; }
+
+.cs-yellow {
+  background-color: yellow; }
+
+.cs-navy {
+  background-color: navy; }

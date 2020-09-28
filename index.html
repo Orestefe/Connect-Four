@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="css/main.css" />
+		<title>Connect Four</title>
+	</head>
+	<body>
+		<div class="game-container">
+			<header class="game-header">
+				<h1>Connect Four</h1>
+			</header>
+			<div class="game-board"></div>
+			<nav class="info-bar">
+				<button id="rules-button" class="btn">Rules</button>
+				<span id="player-scores" class="info-text"></span>
+				<span id="player-turn" class="info-text"></span>
+			</nav>
+			<div id="rules-modal" class="modal rules-modal">
+				<h2>Game Rules:</h2>
+				<p>
+					1. Point the cursor over the row you would like to drop your piece.
+				</p>
+				<p>2. Left click to drop your piece</p>
+				<p>
+					3. When you connect four of your pieces vertically, horizontally, or
+					diagonally you win the game!
+				</p>
+				<p>Click the rules button to close this menu</p>
+			</div>
+			<div id="player-modal" class="modal player-modal">
+				<h2>Player Info</h2>
+				<form onkeydown="return event.key != 'Enter'">
+					<div class="player-info">
+						<div class="player-names">
+							<label for="player1">Player 1:</label>
+							<input
+								type="text"
+								name="player1"
+								id="player1"
+								placeholder="Enter your name"
+								autocomplete="off"
+							/>
+						</div>
+						<div class="player-colors">
+							<span class="color-pick">Choose a Color</span>
+							<button tabindex="-1" class="color-swatch cs-red cs1"></button>
+							<button tabindex="-1" class="color-swatch cs-black cs1"></button>
+							<button tabindex="-1" class="color-swatch cs-green cs1"></button>
+							<button tabindex="-1" class="color-swatch cs-orange cs1"></button>
+							<button tabindex="-1" class="color-swatch cs-yellow cs1"></button>
+							<button tabindex="-1" class="color-swatch cs-navy cs1"></button>
+						</div>
+					</div>
+					<div class="player-info">
+						<div class="player-names">
+							<label for="player2">Player 2:</label>
+							<input
+								type="text"
+								name="player2"
+								id="player2"
+								placeholder="Enter your name"
+								autocomplete="off"
+							/>
+						</div>
+						<div class="player-colors">
+							<span class="color-pick">Choose a Color</span>
+							<button tabindex="-1" class="color-swatch cs-red cs2"></button>
+							<button tabindex="-1" class="color-swatch cs-black cs2"></button>
+							<button tabindex="-1" class="color-swatch cs-green cs2"></button>
+							<button tabindex="-1" class="color-swatch cs-orange cs2"></button>
+							<button tabindex="-1" class="color-swatch cs-yellow cs2"></button>
+							<button tabindex="-1" class="color-swatch cs-navy cs2"></button>
+						</div>
+					</div>
+					<input type="button" id="play" class="btn btn--small" value="Play" />
+				</form>
+			</div>
+			<div id="end-game-modal" class="modal hide end-game-modal">
+				<h2>Game Over!</h2>
+				<div>
+					<h3 id="game-result"></h3>
+					<img
+						src="./images/trophy.png"
+						alt="Picture of a trophy"
+						class="trophy"
+					/>
+				</div>
+				<div>
+					<button id="play-again" class="btn btn--small">Play Again</button>
+					<button id="exit" class="btn btn--small">Exit</button>
+				</div>
+			</div>
+		</div>
+		<script src="connectFour.js"></script>
+	</body>
+</html>
